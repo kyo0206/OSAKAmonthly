@@ -1,0 +1,13 @@
+【一般ユーザー】                 【Supabase】                    【管理者】
+  index.html                     (Database)                      admin.html
+┌──────────────┐   INSERTのみ   ┌──────────────┐   SELECT/UPDATE  ┌──────────────┐
+│  応募フォーム ├──────────────>│ applications │<─────────────────┤ 管理画面     │
+└──────────────┘ (誰でも送信可能) └──────────────┘ (ログイン必須)  └──────────────┘
+                                       ▲
+                            [ Row Level Security ]
+                            ・未ログイン: INSERTのみ許可
+                            ・ログイン済み: SELECT/UPDATE許可
+
+
+Database password
+r59%gWfYWzxYNq?
